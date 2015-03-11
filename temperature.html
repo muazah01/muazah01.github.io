@@ -26,9 +26,17 @@
            
            ch1.innerHTML="Degrees C:" + c;
            fh1.innerHTML="Degrees F:" + f;
-           if (degreesf>90){
+           if (f>90){
                message= document.querySelector("#message");
                message.innnerHTML="Too Hot";
+           }
+           if (f>35){
+            message= document.quesrySelector("#message");
+            message.innerHTML="Too Cold";
+           }
+           if (f>=35 && f<=90){
+            message=document.querySelector("#message");
+            message.innnerHTML= "Okay";
            }
            
        }
