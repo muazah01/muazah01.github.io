@@ -4,7 +4,7 @@
    </head>
    <body>
      <label for="slider">Degrees Celcius:</label>
-     <input type="range" id="slider"  min="-40" max="140" value=0 onmousemove="changetemp();"/> 
+     <input type="range" id="slider"  min="-40" max="140" onmousemove="changetemp();"/> 
        <h1 id="degreesc">Degrees C: 0</h1>
        <h1 id="degreesf">Degrees F: 32</h1>
 
@@ -19,8 +19,10 @@
            
            ch1.innerHTML="Degrees C:" + c;
            fh1.innerHTML="Degrees F:" + f;
+        
            
        }
+         //window.onload=changetemp;
      </script>
    </body>
  </html>
