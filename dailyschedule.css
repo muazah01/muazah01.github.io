@@ -1,6 +1,7 @@
 
 <style>
     table{
+    
     border-style:solid;
     border-width:2px;
     border-color:#212121;
@@ -19,8 +20,9 @@
     border-color:#616161;
     background-color:#B6B6B6;
     text-align:center;
+    padding: 15px;
     }
-    .perfect {
+    .classtime {
         border-style: dotted;
         border-color: red;
     }
