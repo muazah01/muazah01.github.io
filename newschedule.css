@@ -6,5 +6,11 @@ table {
 
 table, th {
     border: 1px solid black;
+    
+td {
+    border-style: solid;
+    border-width:2px;
+    border-color:#616161;
+}
 }
 </style>
