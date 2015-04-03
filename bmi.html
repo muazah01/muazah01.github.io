@@ -1,54 +1,70 @@
 <html>
-<head>
-<title>BMI</title>
-<header>BMI Calculator</header>
-</head>
-<style>
-body{
-text-align: center;
-}
-header{
-text-align: center;
-}
-</style>
-<body>
-<h2> Please enter your weight in pounds and height in inches</h2>
-<label for="weight"> Weight </label>
-<input type ="range" min=0 max=400 id="weight" onmousemove="calculatebmi();" value="0">
-<label for="height"> Height </label>
-<input type ="range" min=0 max=100 id="height" onmousemove="calculatebmi();" value="0">
-<h1 id="outputbmi"> BMI: 0 </h1>
-<h1 id="outputweight"> Weight: 0 </h1>
-<h1 id="outputheight"> Height: 0 </h1>
-<h1 id="value"></h2>
-<script>
-calculatebmi=function()
-{
-w=document.querySelector("#weight").value;
-h=document.querySelector("#height").value;
-bmi= (w * 703)/(h*h);
-bmih1=document.querySelector("#outputbmi");
-weighth1=document.querySelector("#outputweight");
-heighth1=document.querySelector("#outputheight");
-bmih1.innerHTML=" You have a BMI of : "+ bmi;
-weighth1.innerHTML="Weight: "+ w;
-heighth1.innerHTML="height:"+ h;
-if (bmi<18.5)
-{document.body.style.backgroundColor = "#CDDC39";
-value = document.querySelector("#value");
-value.innerHTML = "Your BMI is equal to or less than 18.5 (Underweight)";}
-if (bmi>=18.5 && bmi<=24.99)
-{document.body.style.backgroundColor ="#8BC34A";
-value = document.querySelector("#value");
-value.innerHTML = "Your BMI is between 18.5 and 24.9 (Normal Weight)";}
-if (bmi>=25 && bmi<=29.99)
-{document.body.style.backgroundColor = "#FF4081";
-value = document.querySelector("#value");
-value.innerHTML = "BMI is between 25 and 29.9 (Overweight)";}
-if (bmi>29.99)
-{document.body.style.backgroundColor = "#D32F2F";
-value = document.querySelector("#value");
-value.innerHTML = " Your BMI is higher than 29.9 (Obese Class)";}
-}
-</script>
-</body>
+    <head>
+        <title>BMI</title>
+        <header>BMI Calculator</header>
+    </head>
+    <style>
+    body{ 
+        text-align: center;
+    }
+    header{
+        text-align: center;
+    }
+    </style>
+    <body>
+    <h2> Please enter your weight in pounds and height in inches</h2>
+    
+    <label for="weight"> Weight </label>
+    <input type ="range" min=0  max=400 id="weight" onmousemove="calculatebmi();" value="0">
+    
+    <label for="height"> Height </label>
+     <input type ="range" min=0  max=100 id="height" onmousemove="calculatebmi();" value="0">
+        
+    <h1 id="outputbmi"> BMI: 0 </h1>
+    <h1 id="outputweight"> Weight: 0 </h1>
+    <h1 id="outputheight"> Height: 0 </h1>
+    <h1 id="value"></h2>
+    
+    <script>
+        calculatebmi=function()
+        
+        {
+        
+        w=document.querySelector("#weight").value;
+        h=document.querySelector("#height").value;
+        bmi= (w * 703)/(h*h);  
+         
+        bmih1=document.querySelector("#outputbmi");
+        weighth1=document.querySelector("#outputweight");
+        heighth1=document.querySelector("#outputheight"); 
+        
+        bmih1.innerHTML=" You have a BMI of : "+ bmi;
+        weighth1.innerHTML="Weight: "+ w;
+        heighth1.innerHTML="height:"+ h;
+        
+        if (bmi<18.5)
+        
+        {document.body.style.backgroundColor = "#CDDC39";
+         value = document.querySelector("#value");
+         value.innerHTML = "Your BMI is equal to or less than 18.5 (Underweight)";}
+            
+        if (bmi>=18.5 && bmi<=24.99)
+        {document.body.style.backgroundColor ="#8BC34A";
+         value = document.querySelector("#value");
+         value.innerHTML = "Your BMI is between 18.5 and 24.9 (Normal Weight)";}
+         
+        if (bmi>=25 && bmi<=29.99)
+        {document.body.style.backgroundColor = "#FF4081";
+        value = document.querySelector("#value");
+        value.innerHTML = "BMI is between 25 and 29.9 (Overweight)";}
+            
+        if (bmi>29.99)
+        {document.body.style.backgroundColor = "#D32F2F";
+        value = document.querySelector("#value");
+        value.innerHTML = " Your BMI is higher than 29.9 (Obese Class)";}
+
+        }
+        
+    </script>
+    </body>
+</html>
