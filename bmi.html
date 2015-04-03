@@ -43,26 +43,24 @@
         heighth1.innerHTML="height:"+ h;
         
         if (bmi<18.5)
-        
-        {message.style.backgroundColor = "#CDDC39";
+         message.style.backgroundColor ="#CDDC39";
          message= document.querySelector("#message");
-         message.innerHTML = "Your BMI is equal to or less than 18.5 (Underweight)";}
+         message.innerHTML = "Your BMI is equal to or less than 18.5 (Underweight)";
             
         if (bmi>=18.5 && bmi<=24.99)
-        {message.style.backgroundColor ="#8BC34A";
+         message.style.backgroundColor ="#8BC34A";
          message = document.querySelector("#message");
-         message.innerHTML = "Your BMI is between 18.5 and 24.9 (Normal Weight)";}
+         message.innerHTML = "Your BMI is between 18.5 and 24.9 (Normal Weight)";
          
         if (bmi>=25 && bmi<=29.99)
-        {message.style.backgroundColor = "#FF4081";
+        message.style.backgroundColor = "#FF4081";
         message = document.querySelector("#message");
-        message.innerHTML = "BMI is between 25 and 29.9 (Overweight)";}
+        message.innerHTML = "BMI is between 25 and 29.9 (Overweight)";
             
         if (bmi>29.99)
-        {message.style.backgroundColor = "#D32F2F";
-        message.style.height = 40px;
+        message.style.backgroundColor = "#D32F2F";
         message = document.querySelector("#message");
-        message.innerHTML = " Your BMI is higher than 29.9 (Obese Class)";}
+        message.innerHTML = " Your BMI is higher than 29.9 (Obese Class)";
 
         }
         
