@@ -1,0 +1,74 @@
+<html>
+    <head>
+    <title>Address Book </title>
+    <header> Contact List </header>
+    </head>
+    <style>
+    
+    
+    </style>
+    <body>
+    <h1> Please enter the following infromation: </h1>
+    
+        <label for="name"> First Name</label>
+        <input type ="text" id="name">
+       
+        <label for="last"> Last Name</label>
+        <input type ="text" id="last">
+ 
+        <label for="phone"> Phone Number</label>
+        <input type ="text" id="phone">
+        
+        <label for="email"> Email </label>
+        <input type ="text" id="email">
+
+        <button onclick="register()"> Add Contact </button>
+       
+       <section>
+        <table id="addressbook">
+        <br>
+        <tr>
+            <th>Name:</th>
+            <th>Last Name:</th>
+            <th>Phone:</th>
+            <th>Email:</th>
+        </tr>
+        </table>
+        </section>
+   </body>
+    
+   <script>
+       register=function() {
+           n=document.querySelector("#name").value;
+           l=document.querySelector("#last").value;
+           p=document.querySelector("#phone").value;
+           e=document.querySelector("#email").value;
+           
+           document.querySelector("#name").value="";
+           document.querySelector("#last").value="";
+           document.querySelector("#phone").value="";
+           document.querySelector("#email").value="";
+           
+           database=document.querySelector("#addressbook");
+           row=document.createElement("tr");
+           n1=document.createElement("td");
+           n1.innerHTML=n;
+           row.appendChild(n1);
+           l1=document.createElement("td");
+           l1.innerHTML=l;
+           row.appendChild(l1);
+           p1=document.createElement("td");
+           p1.innerHTML=p;
+           row.appendChild(p1);
+           e1=document.createElement("td");
+           e1.innerHTML=e;
+           row.appendChild(e1);
+           
+           database.appendChild(row); 
+           
+       }
+       
+</script>
+</html>
+
+
