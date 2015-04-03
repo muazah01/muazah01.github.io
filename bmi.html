@@ -30,7 +30,7 @@
         weighth1=document.querySelector("#outputweight");
         heighth1=document.querySelector("#outputheight"); 
         
-        bmih1.innerHTML=" Your BMI is: "+ bmi;
+        bmih1.innerHTML=" You have a BMI of : "+ bmi;
         weighth1.innerHTML="Weight: "+ w;
         heighth1.innerHTML="height:"+ h;
         
@@ -38,22 +38,22 @@
         
         {document.body.style.backgroundColor = "aliceblue";
          value = document.querySelector("#value");
-         value.innerHTML = "Your BMI indicates Underweight";}
+         value.innerHTML = "BMI is equal to or less than 18.5 (Underweight)";}
             
         if (bmi>=18.5 && bmi<=24.99)
         {document.body.style.backgroundColor ="honeydew";
          value = document.querySelector("#value");
-         value.innerHTML = "Your BMI indicates Normal Weight";}
+         value.innerHTML = "BMI is between 18.5 and 24.9 (Normal Weight)";}
          
         if (bmi>=25 && bmi<=29.99)
         {document.body.style.backgroundColor = "wheat";
         value = document.querySelector("#value");
-        value.innerHTML = "Your BMI indicates Overweight";}
+        value.innerHTML = "BMI is between 25 and 29.9 (Overweight)";}
             
         if (bmi>29.99)
-        {document.body.style.backgroundColor = "azure";
+        {document.body.style.backgroundColor = "#D32F2F";
         value = document.querySelector("#value");
-        value.innerHTML = "Your BMI indicates Obesity";}
+        value.innerHTML = "BMI is higher than 29.9 (Obese Class ";}
 
         }
         
