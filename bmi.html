@@ -44,7 +44,7 @@
         
         if (bmi<18.5)
         
-        {messagestyle.backgroundColor = "#CDDC39";
+        {message.style.backgroundColor = "#CDDC39";
          message= document.querySelector("#message");
          message.innerHTML = "Your BMI is equal to or less than 18.5 (Underweight)";}
             
@@ -60,6 +60,7 @@
             
         if (bmi>29.99)
         {message.style.backgroundColor = "#D32F2F";
+        message.style.height = 40px;
         message = document.querySelector("#message");
         message.innerHTML = " Your BMI is higher than 29.9 (Obese Class)";}
 
