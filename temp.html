@@ -3,19 +3,25 @@
         <title>Temperature Convertor</title>
         <header>Temperature Convertor</header>
     </head>
+    <style>
+        header{
+            text-align: center;
+            Color:#CFD8DC;
+        }
+    </style>
     <body>
 
     <h3> Please enter the temperature in Celcius:</h4>
     <label for="celsius"> Celsius </label>
         <input type ="text" id="celsius">
         <button onclick="convert();">Convert to Fahrenheit </button>
-        <h2 id="output"></h2>
+        <h1 id="output"></h1>
     <script>
         convert=function()
-        {t=document.querySelector("#celsius").value;
-        fahren=t*1.8+32;
-        theh2=document.querySelector("#output");
-        theh2.innerHTML="The temperature is: "+ fahren + " F";}
+        c=document.querySelector("#celsius").value;
+        f=c*1.8+32;
+        theh1=document.querySelector("#output");
+        theh1.innerHTML="The temperature is: "+ f + " F";
         </script>
     </body>
 </html>
