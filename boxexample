@@ -1,0 +1,47 @@
+<html>
+<head>
+<title> Box Exercise </title>
+<style>
+
+main {
+       position: relative;
+       background-color:#1976D2;
+       width:400px;
+       height:400px;
+       }
+          
+.card {height: 50px;
+      width: 170px;
+      color: white;
+      text-align: center;
+      padding:50px;}
+    
+#card1 { position: absolute;
+        top: 30px;
+        left: 50px;
+        background-color:#00476B;}
+    
+#card2 { position: absolute;
+        top: 150px;
+        left: 150px;
+        background-color: #006699;}
+    
+#card3 { position: absolute;
+        top: 270px;
+        left: 250px;
+        background-color: #66A3C2;}
+</style>
+</head>
+
+<body>
+<h1> Cards </1>
+ <main>
+   <img id="card1" class="card" src="http://interactivepython.org/runestone/static/webfundamentals/_images/ace-of-hearts.gif" />
+   <img id="card2" class="card" src="http://interactivepython.org/runestone/static/webfundamentals/_images/ace-of-hearts.gif" />
+   <img id="card3" class="card" src="http://interactivepython.org/runestone/static/webfundamentals/_images/ace-of-hearts.gif" />
+   <h1 id="card1" class="box" >card 1</h1>
+   <h1 id="card2" class="box" >card 2</h1>
+   <h1 id="card3" class="box" >card 3</h1>
+</main>
+</body>
+</html>
