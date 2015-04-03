@@ -10,10 +10,10 @@
     <body>
     <h1> Please enter the following infromation: </h1>
     
-        <label for="name"> First Name</label>
+        <label for="fname"> First Name</label>
         <input type ="text" id="name">
        
-        <label for="last"> Last Name</label>
+        <label for="lname"> Last Name</label>
         <input type ="text" id="last">
  
         <label for="phone"> Phone Number</label>
@@ -39,29 +39,29 @@
     
    <script>
        register=function() {
-           n=document.querySelector("#name").value;
-           l=document.querySelector("#last").value;
-           p=document.querySelector("#phone").value;
-           e=document.querySelector("#email").value;
+           firstn=document.querySelector("#fname").value;
+           lastn=document.querySelector("#lname").value;
+           pnumber=document.querySelector("#phone").value;
+           emailad=document.querySelector("#email").value;
            
-           document.querySelector("#name").value="";
-           document.querySelector("#last").value="";
+           document.querySelector("#fname").value="";
+           document.querySelector("#lname").value="";
            document.querySelector("#phone").value="";
            document.querySelector("#email").value="";
            
            database=document.querySelector("#addressbook");
            row=document.createElement("tr");
            n1=document.createElement("td");
-           n1.innerHTML=n;
+           n1.innerHTML=firstn;
            row.appendChild(n1);
            l1=document.createElement("td");
-           l1.innerHTML=l;
+           l1.innerHTML=lastn;
            row.appendChild(l1);
            p1=document.createElement("td");
-           p1.innerHTML=p;
+           p1.innerHTML=pnumber;
            row.appendChild(p1);
            e1=document.createElement("td");
-           e1.innerHTML=e;
+           e1.innerHTML=emailad;
            row.appendChild(e1);
            
            database.appendChild(row); 
