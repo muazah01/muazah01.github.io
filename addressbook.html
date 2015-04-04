@@ -1,29 +1,29 @@
 <html>
     <head>
-    <title>Address Book</title>
-    <header> Address Book </header>
+    <title>Data Base</title>
+    <link rel="stylesheet" type="text/css" href="masterdesign.css">
+    <header> Data Base: </header>
     </head>
     
     <body>
-    <h2> Please add the following information: </h2>
+    <h2> Please add your information to the database: </h2>
     
-        <label for="fname"> First Name</label>
-        <input type ="text" id="fname">
+        <label for="name"> Name</label>
+        <input type ="text" id="name">
        
-        <label for="lname"> Last Name</label>
-        <input type ="text" id="lname">
+        <label for="last"> Last Name</label>
+        <input type ="text" id="last">
  
         <label for="phone"> Phone Number</label>
         <input type ="text" id="phone">
         
-        <label for="emailid"> Email</label>
-        <input type ="text" id="emailid">
-         <aside>
-        <button onclick="register()"> Add Contact </button>
-         </aside>
+        <label for="email"> Email</label>
+        <input type ="text" id="email">
+
+        <button onclick="register()"> Add Information </button>
        
        <section>
-        <table id="addressbook">
+        <table id="database">
         <br>
         <tr>
             <th>Name:</th>
