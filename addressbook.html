@@ -70,13 +70,13 @@ th{
     </body>
     <script>
         addentry=function() {
-            //getting the values from input text
+            
             myfname = document.querySelector("#fname").value;
             mylname = document.querySelector("#lname").value;
             myphone = document.querySelector("#phone").value;
             myemail = document.querySelector("#emailid").value;
             
-            //referencing the table name in order to append incoming new data
+           
             addressbook=document.querySelector("#addressbook");
 
             row=document.createElement("tr");
@@ -98,9 +98,7 @@ th{
 
             addressbook.appendChild(row);         
         }
-    <script type="text/javascript">
-function clearText(a){if(a.defaultValue==a.value){a.value=""}else{if(a.value==""){a.value=a.defaultValue}}};
-</script>
+  
     </script>
     
 
