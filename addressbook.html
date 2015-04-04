@@ -1,31 +1,29 @@
 <html>
     <head>
-    <title>Address Book </title>
-    <header> Address Book/Contact List </header>
+    <title>Address Book</title>
+    <header> Address Book </header>
     </head>
-    <style>
     
-    
-    </style>
     <body>
-    <h1> Please enter the following information: </h1>
+    <h2> Please add the following information: </h2>
     
         <label for="fname"> First Name</label>
-        <input type ="text" id="name">
+        <input type ="text" id="fname">
        
         <label for="lname"> Last Name</label>
-        <input type ="text" id="last">
+        <input type ="text" id="lname">
  
         <label for="phone"> Phone Number</label>
         <input type ="text" id="phone">
         
-        <label for="email"> Email </label>
-        <input type ="text" id="email">
+        <label for="emailid"> Email</label>
+        <input type ="text" id="emailid">
 
         <button onclick="register()"> Add Contact </button>
        
        <section>
         <table id="addressbook">
+        <br>
         <tr>
             <th>Name:</th>
             <th>Last Name:</th>
@@ -38,36 +36,34 @@
     
    <script>
        register=function() {
-           firstn=document.querySelector("#fname").value;
-           lastn=document.querySelector("#lname").value;
-           pnumber=document.querySelector("#phone").value;
-           emailad=document.querySelector("#email").value;
+           n=document.querySelector("#name").value;
+           l=document.querySelector("#last").value;
+           p=document.querySelector("#phone").value;
+           e=document.querySelector("#email").value;
            
-           document.querySelector("#fname").value="";
-           document.querySelector("#lname").value="";
+           document.querySelector("#name").value="";
+           document.querySelector("#last").value="";
            document.querySelector("#phone").value="";
            document.querySelector("#email").value="";
            
-           database=document.querySelector("#addressbook");
+           database=document.querySelector("#database");
            row=document.createElement("tr");
            n1=document.createElement("td");
-           n1.innerHTML=firstn;
+           n1.innerHTML=n;
            row.appendChild(n1);
            l1=document.createElement("td");
-           l1.innerHTML=lastn;
+           l1.innerHTML=l;
            row.appendChild(l1);
            p1=document.createElement("td");
-           p1.innerHTML=pnumber;
+           p1.innerHTML=p;
            row.appendChild(p1);
            e1=document.createElement("td");
-           e1.innerHTML=emailad;
+           e1.innerHTML=e;
            row.appendChild(e1);
            
-           addressbook.appendChild(row); 
+           database.appendChild(row); 
            
        }
        
 </script>
 </html>
-
-
