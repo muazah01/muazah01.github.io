@@ -1,67 +1,105 @@
 <html>
-    <head>
-    <title>Data Base</title>
-    <link rel="stylesheet" type="text/css" href="masterdesign.css">
-    <header> Data Base: </header>
-    </head>
+<head>
+    <title>Address Book</title>
+    <header> Address Book </header>
+<style>
+th{
+    border-style: solid;
+    border-width:1px;
+    background-color:#BBDEFB;
+    text-align:center;
+    padding: 10px;
+}
+#nav {
     
-    <body>
-    <h2> Please add your information to the database: </h2>
-    
-        <label for="name"> Name</label>
-        <input type ="text" id="name">
-       
-        <label for="last"> Last Name</label>
-        <input type ="text" id="last">
- 
-        <label for="phone"> Phone Number</label>
-        <input type ="text" id="phone">
-        
-        <label for="email"> Email</label>
-        <input type ="text" id="email">
+    background-color:#BBDEFB;
+    width: 60%;
+    float:right;
+    padding:5px;
+    border-style:none;
+    border-color:#212121;
+    text-align:center;
+            
+}
+#section {
+    width:40%;
+    float:left;
+    padding:5px;        
+}
 
-        <button onclick="register()"> Add Information </button>
-       
-       <section>
-        <table id="database">
-        <br>
-        <tr>
-            <th>Name:</th>
-            <th>Last Name:</th>
-            <th>Phone:</th>
-            <th>Email:</th>
-        </tr>
+</style>
+    </head>
+    <body>
+        <div id="section">
+        <h2> Please add the following information: </h2>
+    <ol>
+        <li>
+        <label for ="fname">First Name</label>
+        </li>
+        <input type="text" id="fname">
+         <li>
+        <label for= "lname">Last Name</label>
+        </li>
+        <input type= "text" id= "lname">
+
+         <li>
+        <label for= "phone">Phone Number</label>
+        </li>
+        <input type= "text" id="phone">
+
+         <li>
+        <label for="emailid">E-mail</label>
+        </li>
+        <input type="text" id="emailid">
+
+        <button onclick="addentry();">Add Contact</button>
+    </ol>
+        </div>
+        
+    <div id="nav">
+        <table id="addressbook"> 
+            <tr>
+                <th>First Name</th>
+                <th>Last Name</th>
+                <th>Phone Number</th>
+                <th>E-mail</th>
+            </tr>
         </table>
-        </section>
-   </body>
+    </div>
+        
+    </body>
+    <script>
+        addentry=function() {
+            //getting the values from input text
+            myfname = document.querySelector("#fname").value;
+            mylname = document.querySelector("#lname").value;
+            myphone = document.querySelector("#phone").value;
+            myemail = document.querySelector("#emailid").value;
+            
+            //referencing the table name in order to append incoming new data
+            addressbook=document.querySelector("#addressbook");
+
+            row=document.createElement("tr");
+            newfname=document.createElement("td");
+            newfname.innerHTML=myfname;
+            row.appendChild(newfname);
+
+            newlname=document.createElement("td");
+            newlname.innerHTML=mylname;
+            row.appendChild(newlname);
+
+            newphone=document.createElement("td");
+            newphone.innerHTML=myphone;
+            row.appendChild(newphone);
+
+            newemail=document.createElement("td");
+            newemail.innerHTML=myemail;
+            row.appendChild(newemail);
+
+            addressbook.appendChild(row);         
+        }
+    </script>
     
-   <script>
-       register=function() {
-           n=document.querySelector("#name").value;
-           l=document.querySelector("#last").value;
-           p=document.querySelector("#phone").value;
-           e=document.querySelector("#email").value;
-           
-           
-           
-           database=document.querySelector("#database");
-           row=document.createElement("tr");
-           n1=document.createElement("td");
-           n1.innerHTML=n;
-           row.appendChild(n1);
-           l1=document.createElement("td");
-           l1.innerHTML=l;
-           row.appendChild(l1);
-           p1=document.createElement("td");
-           p1.innerHTML=p;
-           row.appendChild(p1);
-           e1=document.createElement("td");
-           e1.innerHTML=e;
-           row.appendChild(e1);
-           
-           database.appendChild(row); 
-           
-       }
-       
-</script>
+
+
 </html>
