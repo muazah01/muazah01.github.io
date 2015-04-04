@@ -1,5 +1,7 @@
 <html>
 <head>
+<title> Grocery List</title>
+<header> <h2>Grocery List</h2></header>
     <style>
     li{
         list-style-type: none;
@@ -10,44 +12,74 @@
     .checkedoff {
         text-decoration: line-through;
     }
-    .Red{
+    .Definitely{
         color:red;
         }
-    .Blue{
+    .Maybe{
         color:blue;
     }
-    .Green{
+    .Possibly{
         color:green;
     }
-        
-        
+    header{
+        text-align: center;
+        background-color:#009688;
+        padding: 10px;
+
+    }
+    body{
+        background-color:#BBDEFB;
+    } 
+    mark.red {
+        color:#ff0000;
+        background: none; 
+    }  
+    mark.blue{
+        color: blue;
+        background: none;
+    }
+    mark.green{
+        color:green;
+        background: none;
+    }
+
+ 
     </style>
     
 </head>    
 <body>
+    <p> Select how important the item is using the drop down menu!<p>
     <select id="colorchooser">
-        <option>Red</option>
-        <option>Blue</option>
-        <option>Green</option>
+        
+        <option>Definitely</option>
+        <option>Maybe</option>
+        <option>Possibly</option>
         
     </select>
-           
-    <button onclick="increment()">Click Me</button>
+
+    <label for ="thebox">Item Name</label>
+    <input type="text" id="thebox">
+    <button onclick="increment();">Add New Item</button> 
+    <p><mark class= "red">Definitely</mark> = You must buy the item.</p>
+    <p><mark class= "blue">Maybe</mark> = You can choose to buy or not to buy the item.</p>
+    <p><mark class="green">Possibly </mark>= You can buy these items if you have extra money!</p>  
     <ul id="out">
     </ul>
     
     <script>
-        var count = 0;
+        //var count = 0;
         
         increment = function() {
-            count = count + 1;
+            mybox= document.querySelector("#thebox");
+            myitem= mybox.value;
+            //count = count + 1;
             output = document.querySelector("#out");
             newli = document.createElement("li");
             
             cb = document.createElement("input");
             cb.type="checkbox";
             newli.appendChild(cb);
-            te = document.createTextNode(count);
+            te = document.createTextNode(myitem);
             newli.appendChild(te);
             
             cb.onclick=select;
